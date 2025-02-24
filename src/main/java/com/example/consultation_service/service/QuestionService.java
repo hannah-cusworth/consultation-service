@@ -20,9 +20,10 @@ public class QuestionService {
   private ConsultationRepository consultationRepository;
 
   @Autowired
-  public QuestionService(QuestionRepository questionRepository, AnswerRepository answerRepository) {
+  public QuestionService(QuestionRepository questionRepository, AnswerRepository answerRepository, ConsultationRepository consultationRepository) {
     this.questionRepository = questionRepository;
     this.answerRepository = answerRepository;
+    this.consultationRepository = consultationRepository;
   }
 
   public Answer saveResponse(Answer answer, Long questionId, Long consultationId) throws ServiceException, RepositoryException {

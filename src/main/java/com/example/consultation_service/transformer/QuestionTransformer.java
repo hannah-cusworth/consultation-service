@@ -1,6 +1,7 @@
 package com.example.consultation_service.transformer;
 
 import com.example.consultation_service.dto.ConsultationQuestionDto;
+import com.example.consultation_service.model.Answer;
 import com.example.consultation_service.model.Question;
 
 import java.util.List;
@@ -14,4 +15,5 @@ public class QuestionTransformer {
   public static ConsultationQuestionDto toDtoElement(Question question) {
     return new ConsultationQuestionDto(question.getId(), question.getText(), question.getQuestionType());
   }
+
 }

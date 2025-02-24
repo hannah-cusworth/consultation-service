@@ -68,13 +68,15 @@ import java.util.List;
   }
 
 
-  @PutMapping("/{id}/question")
+  @PutMapping("/{id}/questions/{questionId}")
   public ResponseEntity<Object> putConsultationQuestion(
-      @RequestBody ConsultationQuestionDto question, @PathVariable Long id) {
+      @RequestBody ConsultationQuestionDto question, @PathVariable Long id, @PathVariable Long questionId) {
       try {
+        if (!questionId.equals(question.questionId))
+          return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid Data: question id of data does not match called endpoint" + questionId);
         Answer answer = AnswerTransformer.fromDtoElement(question);
-        Answer result = questionService.saveResponse(answer, question.questionId, id);
-        return ResponseEntity.status(HttpStatus.OK).body(result);
+        questionService.saveResponse(answer, question.questionId, id);
+        return ResponseEntity.status(HttpStatus.OK).body(question);
       } catch (TransformationException ex) {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST)
             .body("Invalid data: consultation question invalid.");
