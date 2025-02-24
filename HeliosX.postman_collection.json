@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "9df571de-2d53-4b71-af3f-688bf34ca3ca",
+		"name": "HeliosX",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42580327"
+	},
+	"item": [
+		{
+			"name": "get consultationTypes",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get consultations",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "post consultation",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "put consultation question",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
