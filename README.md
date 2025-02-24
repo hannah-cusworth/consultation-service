@@ -1,5 +1,12 @@
 # Consultation Service
 
+## Running locally
+
+To run:
+`./gradlew run`
+
+This repository includes a Postman collection for local testing `HeliosX.postman_collection.json`.
+
 ## Model Design Choices
 - ConsultationType: A collection of questions needed for the prescription of a product. This ensures questions can be reused across consultations and updated universally.
 - Consultation: A consultation of a certain type. This will become associated with a customer upon checkout.
