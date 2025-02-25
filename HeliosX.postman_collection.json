@@ -10,7 +10,18 @@
 			"name": "get consultationTypes",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/consultationtypes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"consultationtypes"
+					]
+				}
 			},
 			"response": []
 		},
@@ -18,23 +29,77 @@
 			"name": "get consultations",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/consultations",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"consultations"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "post consultation",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": null,\n    \"consultationType\": {\n        \"id\": 123,\n        \"name\": \"Genovian Pear allergy\"\n    },\n    \"consultationQuestions\": null,\n    \"status\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/consultations",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"consultations"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "put consultation question",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"questionId\": 10,\n    \"questionText\": \"Do you have any preexitsting medical conditions?\",\n    \"questionType\": \"STRING\",\n    \"questionResponse\": \"Yes I have a heart condition.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/consultations/0/questions/10",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"consultations",
+						"0",
+						"questions",
+						"10"
+					]
+				}
 			},
 			"response": []
 		}
